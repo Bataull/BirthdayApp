@@ -14,6 +14,12 @@
 		115085922B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 115085902B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld */; };
 		115085942B6E1CAE008BE061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115085932B6E1CAE008BE061 /* Assets.xcassets */; };
 		115085972B6E1CAE008BE061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115085952B6E1CAE008BE061 /* LaunchScreen.storyboard */; };
+		115085A42B6EC76B008BE061 /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085A32B6EC76B008BE061 /* NewInfoViewController.swift */; };
+		115085A62B6EC778008BE061 /* NewInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085A52B6EC778008BE061 /* NewInfoViewModel.swift */; };
+		115085AA2B6EC7A7008BE061 /* BirthdayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085A92B6EC7A7008BE061 /* BirthdayListViewController.swift */; };
+		115085AC2B6EC7B5008BE061 /* BirthdayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085AB2B6EC7B5008BE061 /* BirthdayListViewModel.swift */; };
+		115085AF2B6EC7CB008BE061 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085AE2B6EC7CB008BE061 /* CoreDataManager.swift */; };
+		115085B22B6EC838008BE061 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085B12B6EC838008BE061 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		115085932B6E1CAE008BE061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115085962B6E1CAE008BE061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115085982B6E1CAE008BE061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115085A32B6EC76B008BE061 /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
+		115085A52B6EC778008BE061 /* NewInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewModel.swift; sourceTree = "<group>"; };
+		115085A92B6EC7A7008BE061 /* BirthdayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewController.swift; sourceTree = "<group>"; };
+		115085AB2B6EC7B5008BE061 /* BirthdayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewModel.swift; sourceTree = "<group>"; };
+		115085AE2B6EC7CB008BE061 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		115085B12B6EC838008BE061 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 		115085862B6E1CAC008BE061 /* BirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
+				1150859E2B6EC6FA008BE061 /* ViewControllers */,
 				115085872B6E1CAC008BE061 /* AppDelegate.swift */,
 				115085892B6E1CAC008BE061 /* SceneDelegate.swift */,
 				1150858B2B6E1CAC008BE061 /* ViewController.swift */,
@@ -68,6 +81,51 @@
 				115085902B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld */,
 			);
 			path = BirthdayApp;
+			sourceTree = "<group>";
+		};
+		1150859E2B6EC6FA008BE061 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				115085B02B6EC81F008BE061 /* NotificationManager */,
+				115085AD2B6EC7BB008BE061 /* CoreDataManager */,
+				115085A82B6EC78B008BE061 /* BirthdayListViewController */,
+				115085A22B6EC757008BE061 /* NewInfoViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		115085A22B6EC757008BE061 /* NewInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				115085A32B6EC76B008BE061 /* NewInfoViewController.swift */,
+				115085A52B6EC778008BE061 /* NewInfoViewModel.swift */,
+			);
+			path = NewInfoViewController;
+			sourceTree = "<group>";
+		};
+		115085A82B6EC78B008BE061 /* BirthdayListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				115085A92B6EC7A7008BE061 /* BirthdayListViewController.swift */,
+				115085AB2B6EC7B5008BE061 /* BirthdayListViewModel.swift */,
+			);
+			path = BirthdayListViewController;
+			sourceTree = "<group>";
+		};
+		115085AD2B6EC7BB008BE061 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				115085AE2B6EC7CB008BE061 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		115085B02B6EC81F008BE061 /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				115085B12B6EC838008BE061 /* NotificationManager.swift */,
+			);
+			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +201,14 @@
 			files = (
 				115085922B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld in Sources */,
 				1150858C2B6E1CAC008BE061 /* ViewController.swift in Sources */,
+				115085B22B6EC838008BE061 /* NotificationManager.swift in Sources */,
 				115085882B6E1CAC008BE061 /* AppDelegate.swift in Sources */,
+				115085AA2B6EC7A7008BE061 /* BirthdayListViewController.swift in Sources */,
 				1150858A2B6E1CAC008BE061 /* SceneDelegate.swift in Sources */,
+				115085AC2B6EC7B5008BE061 /* BirthdayListViewModel.swift in Sources */,
+				115085AF2B6EC7CB008BE061 /* CoreDataManager.swift in Sources */,
+				115085A42B6EC76B008BE061 /* NewInfoViewController.swift in Sources */,
+				115085A62B6EC778008BE061 /* NewInfoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
