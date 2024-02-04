@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		115085882B6E1CAC008BE061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085872B6E1CAC008BE061 /* AppDelegate.swift */; };
 		1150858A2B6E1CAC008BE061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085892B6E1CAC008BE061 /* SceneDelegate.swift */; };
-		1150858C2B6E1CAC008BE061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150858B2B6E1CAC008BE061 /* ViewController.swift */; };
 		1150858F2B6E1CAC008BE061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1150858D2B6E1CAC008BE061 /* Main.storyboard */; };
 		115085922B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 115085902B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld */; };
 		115085942B6E1CAE008BE061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115085932B6E1CAE008BE061 /* Assets.xcassets */; };
@@ -20,13 +19,13 @@
 		115085AC2B6EC7B5008BE061 /* BirthdayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085AB2B6EC7B5008BE061 /* BirthdayListViewModel.swift */; };
 		115085AF2B6EC7CB008BE061 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085AE2B6EC7CB008BE061 /* CoreDataManager.swift */; };
 		115085B22B6EC838008BE061 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085B12B6EC838008BE061 /* NotificationManager.swift */; };
+		115085B52B6F90E4008BE061 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115085B42B6F90E4008BE061 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		115085842B6E1CAC008BE061 /* BirthdayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115085872B6E1CAC008BE061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115085892B6E1CAC008BE061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1150858B2B6E1CAC008BE061 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1150858E2B6E1CAC008BE061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		115085912B6E1CAC008BE061 /* BirthdayApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayApp.xcdatamodel; sourceTree = "<group>"; };
 		115085932B6E1CAE008BE061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		115085AB2B6EC7B5008BE061 /* BirthdayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewModel.swift; sourceTree = "<group>"; };
 		115085AE2B6EC7CB008BE061 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		115085B12B6EC838008BE061 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		115085B42B6F90E4008BE061 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +70,12 @@
 		115085862B6E1CAC008BE061 /* BirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
+				115085B32B6F90DA008BE061 /* Cell */,
+				115085AD2B6EC7BB008BE061 /* CoreDataManager */,
+				115085B02B6EC81F008BE061 /* NotificationManager */,
 				1150859E2B6EC6FA008BE061 /* ViewControllers */,
 				115085872B6E1CAC008BE061 /* AppDelegate.swift */,
 				115085892B6E1CAC008BE061 /* SceneDelegate.swift */,
-				1150858B2B6E1CAC008BE061 /* ViewController.swift */,
 				1150858D2B6E1CAC008BE061 /* Main.storyboard */,
 				115085932B6E1CAE008BE061 /* Assets.xcassets */,
 				115085952B6E1CAE008BE061 /* LaunchScreen.storyboard */,
@@ -86,8 +88,6 @@
 		1150859E2B6EC6FA008BE061 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				115085B02B6EC81F008BE061 /* NotificationManager */,
-				115085AD2B6EC7BB008BE061 /* CoreDataManager */,
 				115085A82B6EC78B008BE061 /* BirthdayListViewController */,
 				115085A22B6EC757008BE061 /* NewInfoViewController */,
 			);
@@ -126,6 +126,14 @@
 				115085B12B6EC838008BE061 /* NotificationManager.swift */,
 			);
 			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		115085B32B6F90DA008BE061 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				115085B42B6F90E4008BE061 /* CustomCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,13 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				115085922B6E1CAC008BE061 /* BirthdayApp.xcdatamodeld in Sources */,
-				1150858C2B6E1CAC008BE061 /* ViewController.swift in Sources */,
 				115085B22B6EC838008BE061 /* NotificationManager.swift in Sources */,
 				115085882B6E1CAC008BE061 /* AppDelegate.swift in Sources */,
 				115085AA2B6EC7A7008BE061 /* BirthdayListViewController.swift in Sources */,
 				1150858A2B6E1CAC008BE061 /* SceneDelegate.swift in Sources */,
 				115085AC2B6EC7B5008BE061 /* BirthdayListViewModel.swift in Sources */,
 				115085AF2B6EC7CB008BE061 /* CoreDataManager.swift in Sources */,
+				115085B52B6F90E4008BE061 /* CustomCell.swift in Sources */,
 				115085A42B6EC76B008BE061 /* NewInfoViewController.swift in Sources */,
 				115085A62B6EC778008BE061 /* NewInfoViewModel.swift in Sources */,
 			);
