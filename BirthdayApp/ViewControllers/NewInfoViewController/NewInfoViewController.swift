@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class NewInfoViewController: UIViewController {
     
@@ -18,7 +19,8 @@ class NewInfoViewController: UIViewController {
         addConstraints()
         addSetups()
         
-        viewModel = DefaultNewInfoViewModel()
+        let coreDataManager = CoreDataManager.instance
+        viewModel = DefaultNewInfoViewModel(coreDataManager: coreDataManager)
         if let viewModel = viewModel as? DefaultNewInfoViewModel {
             viewModel.setNavigationController(self.navigationController)
         }
@@ -101,6 +103,13 @@ class NewInfoViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        viewModel.saveButtonTapped()
+        guard let name = nameTextField.text,
+          let surname = surnameTextField.text
+        else {
+            return
+        }
+        let selectedDate = datePicker.date
+
+        viewModel.saveButtonTapped(name: name, surname: surname, date: selectedDate)
     }
 }
